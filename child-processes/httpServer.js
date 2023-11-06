@@ -22,6 +22,7 @@ const requestListener = function (req, res) {
             res.writeHead(200);
             res.end(message);
         });
+        child.send("START");
     } else if (req.url === "/hello") {
         console.log("Returning /hello results");
         res.setHeader("Content-Type", "application/json");
